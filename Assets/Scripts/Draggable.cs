@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     // The drag anchor is the place on the object where the player clicked.
     Vector2 dragAnchor;
@@ -45,5 +45,15 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     void Update()
     {
         
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        DragAnchor.instance.StartDrag(gameObject, eventData.pointerPressRaycast.worldPosition);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        DragAnchor.instance.EndDrag(gameObject);
     }
 }
