@@ -5,8 +5,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(Collider2D))]
 public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    public PhysicsSettings physics;
+
     // The drag anchor is the place on the object where the player clicked.
     Vector2 dragAnchor;
 
@@ -36,9 +39,23 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         set => _onEndDragSuccess = value;
     }
 
-    private void OnEnable()
+    private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>(); 
+        boxCollider = GetComponent<BoxCollider2D>();
+        Rigidbody2D body = GetComponent<Rigidbody2D>();
+        if (body == null)
+        {
+            body = gameObject.AddComponent<Rigidbody2D>();
+        }
+        if (physics == null)
+        {
+            Debug.LogWarningFormat("No physics settings on {0}", gameObject.name);
+        }
+        else
+        {
+            body.drag = physics.linearDrag;
+            body.angularDrag = physics.angularDrag;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)

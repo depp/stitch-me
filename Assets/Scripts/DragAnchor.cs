@@ -8,6 +8,8 @@ using UnityEngine;
 [RequireComponent(typeof(SpringJoint2D))]
 public class DragAnchor : MonoBehaviour
 {
+    public PhysicsSettings physics;
+
     static DragAnchor _instance;
 
     /// <summary>
@@ -69,6 +71,15 @@ public class DragAnchor : MonoBehaviour
         _instance = this;
         gameObject.SetActive(false);
         joint = GetComponent<SpringJoint2D>();
+        if (physics == null)
+        {
+            Debug.LogWarningFormat("No physics settings on {0}", gameObject.name);
+        }
+        else
+        {
+            joint.frequency = physics.springFrequency;
+            joint.dampingRatio = physics.springDamping;
+        }
     }
 
     private void OnDestroy()

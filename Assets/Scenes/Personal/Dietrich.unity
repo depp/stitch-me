@@ -220,6 +220,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 124375638, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 269681345, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 292090349, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 341655662, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 458634953, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 709095958, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 1206767550, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 1264684183, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 1380325420, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 1389233262, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 1742737886, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
+    - target: {fileID: 2027974835, guid: 6fcc8806076924a8c96bdbec0fef0d19, type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
     - target: {fileID: 531625542206724954, guid: 6fcc8806076924a8c96bdbec0fef0d19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,6 +515,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6543323038576074128, guid: 9db1353a640f4448583d4f86fe51a598,
+        type: 3}
+      propertyPath: physics
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f,
+        type: 2}
     - target: {fileID: 6543323038576074129, guid: 9db1353a640f4448583d4f86fe51a598,
         type: 3}
       propertyPath: m_Name
