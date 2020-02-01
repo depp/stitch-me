@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider2D)), RequireComponent(typeof(Rigidbody2D))]
 public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public PhysicsSettings physics;
@@ -58,6 +58,8 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     
     private void Awake()
     {
+        Collider2D collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
         Rigidbody2D body = GetComponent<Rigidbody2D>();
         if (body == null)
         {

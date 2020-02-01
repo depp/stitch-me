@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -529,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -735,6 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -970,6 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 6542294494751905760}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -1109,6 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -1248,6 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -1487,6 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -1695,6 +1702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -1873,6 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -2011,6 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -2150,6 +2160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
@@ -2289,6 +2300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f4f71226b14a8b9f18a84f367ec6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physics: {fileID: 11400000, guid: d5fad164e67c4416e97025e659046e3f, type: 2}
   _target: {fileID: 0}
   _collider: {fileID: 0}
   _onEndDragSuccess:
