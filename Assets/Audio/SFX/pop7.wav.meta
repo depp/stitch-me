@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8d91ce71c633da444a6ad19a152183e8
+=======
+guid: 2a508f83709164c0f88f6ff9273b9df6
+>>>>>>> add a script to update text messages
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
