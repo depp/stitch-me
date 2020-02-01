@@ -22,12 +22,21 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         set => _target = value;
     }
 
-    private BoxCollider2D _boxCollider;
+    [SerializeField]
+    private Collider2D _collider;
 
-    public BoxCollider2D boxCollider
+    public Collider2D collider
     {
-        get => _boxCollider;
-        set => _boxCollider = value;
+        get => _collider;
+        set => _collider = value;
+    }
+    
+    private Rigidbody2D _rigidbody;
+
+    public Rigidbody2D rigidbody
+    {
+        get => _rigidbody;
+        set => _rigidbody = value;
     }
 
     [SerializeField]
@@ -38,10 +47,17 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         get => _onEndDragSuccess;
         set => _onEndDragSuccess = value;
     }
+    
+    private Vector3 _originalPosition;
 
+    public Vector3 originalPosition
+    {
+        get => _originalPosition;
+        set => _originalPosition = value;
+    }
+    
     private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
         Rigidbody2D body = GetComponent<Rigidbody2D>();
         if (body == null)
         {
@@ -58,6 +74,17 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
     }
 
+    private void OnEnable()
+    {
+        collider = GetComponent<Collider2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        originalPosition = transform.localPosition;
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         dragAnchor = transform.InverseTransformPoint(eventData.pointerPressRaycast.worldPosition);
@@ -72,11 +99,6 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         UpdateDrag(eventData);
-
-        if (boxCollider.bounds.Intersects(target.bounds)) {
-            boxCollider.enabled = false;
-            onEndDragSuccess.Invoke();
-        }
     }
     // if(topHeaderBoxCollider.bounds.Intersects(currentHeader.boxCollider.bounds))
 
@@ -99,5 +121,12 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         DragAnchor.instance.EndDrag(gameObject);
+        
+        if (collider.bounds.Intersects(target.bounds)) {
+            // var joint = target.GetComponent<SpringJoint2D>();
+            // joint.connectedBody = rigidbody;
+            collider.enabled = false;
+            onEndDragSuccess.Invoke();
+        }
     }
 }
