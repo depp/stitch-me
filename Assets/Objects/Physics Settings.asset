@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linearDrag: 3
   angularDrag: 5
-  springFrequency: 2
+  springFrequency: 8
   springDamping: 1
-  springDistance: 0.01
