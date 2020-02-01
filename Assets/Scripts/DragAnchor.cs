@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A 
+/// An anchor for where we are dragging a part to. The object will follow the
+/// mouse cursor, but only be active while a part is being dragged.
 /// </summary>
-[RequireComponent(typeof(SpringJoint2D))]
 public class DragAnchor : MonoBehaviour
 {
     public PhysicsSettings physics;
@@ -28,14 +28,16 @@ public class DragAnchor : MonoBehaviour
     }
 
     GameObject currentDraggable;
-    SpringJoint2D joint;
+    TargetJoint2D joint;
 
     public void StartDrag(GameObject draggable, Vector2 dragPos)
     {
+        if (draggable == null)
+            throw new System.ArgumentNullException(nameof(draggable));
         if (currentDraggable != null)
         {
             Debug.LogError("Tried to drag multiple objects");
-            EndDrag(currentDraggable);
+            EndDrag();
         }
         Rigidbody2D otherBody = draggable.GetComponent<Rigidbody2D>();
         if (otherBody == null)
@@ -46,17 +48,46 @@ public class DragAnchor : MonoBehaviour
         transform.position = dragPos;
         gameObject.SetActive(true);
         currentDraggable = draggable;
-        joint.connectedBody = otherBody;
-        joint.connectedAnchor = draggable.transform.InverseTransformPoint(dragPos);
+        joint = draggable.GetComponent<TargetJoint2D>();
+        if (joint == null)
+        {
+            joint = draggable.AddComponent<TargetJoint2D>();
+        }
+        // Note: Set anchor before target, or you will get glitches.
+        joint.anchor = draggable.transform.InverseTransformPoint(dragPos);
+        joint.target = dragPos;
+        if (physics == null)
+        {
+            Debug.LogWarning("Missing physics settings");
+        }
+        else
+        {
+            joint.frequency = physics.springFrequency;
+            joint.dampingRatio = physics.springDamping;
+        }
     }
 
+    /// <summary>
+    /// End a dragging action.
+    /// </summary>
+    /// <param name="draggable">The object currently being dragged.</param>
     public void EndDrag(GameObject draggable)
     {
         if (currentDraggable == draggable)
+            EndDrag();
+    }
+
+    /// <summary>
+    /// End the current dragging action.
+    /// </summary>
+    private void EndDrag()
+    {
+        gameObject.SetActive(false);
+        currentDraggable = null;
+        if (joint != null)
         {
-            gameObject.SetActive(false);
-            currentDraggable = null;
-            joint.connectedBody = null;
+            Destroy(joint);
+            joint = null;
         }
     }
 
@@ -70,17 +101,6 @@ public class DragAnchor : MonoBehaviour
         }
         _instance = this;
         gameObject.SetActive(false);
-        joint = GetComponent<SpringJoint2D>();
-        if (physics == null)
-        {
-            Debug.LogWarningFormat("No physics settings on {0}", gameObject.name);
-        }
-        else
-        {
-            joint.frequency = physics.springFrequency;
-            joint.dampingRatio = physics.springDamping;
-            joint.distance = physics.springDistance;
-        }
     }
 
     private void OnDestroy()
@@ -95,6 +115,10 @@ public class DragAnchor : MonoBehaviour
     {
         Vector2 mousePosScreen = Input.mousePosition;
         Vector2 mousePosWorld = Camera.main.ScreenToWorldPoint(mousePosScreen);
-        transform.position = new Vector3(mousePosWorld.x, mousePosWorld.y, transform.position.z);
+        transform.position = mousePosWorld;
+        if (joint != null)
+        {
+            joint.target = mousePosWorld;
+        }
     }
 }
