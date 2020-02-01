@@ -72,6 +72,131 @@ MonoBehaviour:
       _useConstant: 1
       _variable: {fileID: 0}
       _constantValue: 0
+  - _description: "IF SelectedItem is EqualTo 1\n    set_sprite"
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6531169028032786279}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8699069900992395679, guid: b5f2ea9246d804216a4ba38837fb87b7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _intComparisonOperation: 2
+    _intReference:
+      _useConstant: 0
+      _variable: {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
+      _constantValue: 0
+    _intCondition:
+      _useConstant: 1
+      _variable: {fileID: 0}
+      _constantValue: 1
+  - _description: "IF SelectedItem is EqualTo 2\n    set_sprite"
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6531169028032786279}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 7155652846937496742, guid: b5f2ea9246d804216a4ba38837fb87b7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _intComparisonOperation: 2
+    _intReference:
+      _useConstant: 0
+      _variable: {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
+      _constantValue: 0
+    _intCondition:
+      _useConstant: 1
+      _variable: {fileID: 0}
+      _constantValue: 2
+  - _description: "IF SelectedItem is EqualTo 3\n    set_sprite"
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6531169028032786279}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 5292716684467120071, guid: b5f2ea9246d804216a4ba38837fb87b7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _intComparisonOperation: 2
+    _intReference:
+      _useConstant: 0
+      _variable: {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
+      _constantValue: 0
+    _intCondition:
+      _useConstant: 1
+      _variable: {fileID: 0}
+      _constantValue: 3
+  - _description: "IF SelectedItem is EqualTo 4\n    set_sprite"
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6531169028032786279}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -5651667117540000442, guid: b5f2ea9246d804216a4ba38837fb87b7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _intComparisonOperation: 2
+    _intReference:
+      _useConstant: 0
+      _variable: {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
+      _constantValue: 0
+    _intCondition:
+      _useConstant: 1
+      _variable: {fileID: 0}
+      _constantValue: 4
+  - _description: "IF SelectedItem is EqualTo 5\n    set_sprite"
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6531169028032786279}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3424674198401663528, guid: b5f2ea9246d804216a4ba38837fb87b7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _intComparisonOperation: 2
+    _intReference:
+      _useConstant: 0
+      _variable: {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
+      _constantValue: 0
+    _intCondition:
+      _useConstant: 1
+      _variable: {fileID: 0}
+      _constantValue: 5
 --- !u!212 &6531169028032786279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,7 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2825a43da3041d991c14bceded3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _simpleSignals: []
+  _simpleSignals:
+  - {fileID: 11400000, guid: 86a3f095655b44f20b0310b030cd0532, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
