@@ -2,23 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cursor : MonoBehaviour
+public class CursorScript : MonoBehaviour
 {
     public Sprite cursor;
+    public Sprite defaultSprite;
+    public Camera camera;
     private SpriteRenderer spriteRenderer;
+    private Vector3 mousePosition;
+    private float initial_Z;
 
-
-    private void Start()
+    private void Awake()
     {
         spriteRenderer= GetComponent<SpriteRenderer>();
+        cursor = spriteRenderer.sprite;
+
+        //camera = GetComponent<Camera>();
+
+        Cursor.visible = false;
+        initial_Z = transform.position.z;
     }
 
-    private void Update()
+    //private void Start()
+    //{
+    //    //camera = Camera.allCameras[0];
+    //}
+
+    void Update()
     {
-        if(Input.anyKeyDown)
+        mousePosition = Input.mousePosition;
+
+        if (Input.GetKey(KeyCode.A))
         {
             cursor = spriteRenderer.sprite;
+        } 
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            cursor = defaultSprite;
         }
+
+        Debug.Log(camera.ScreenToWorldPoint(mousePosition));
+        transform.position = camera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, initial_Z ));
     }
 
     public void Poop()
