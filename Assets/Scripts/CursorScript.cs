@@ -30,17 +30,6 @@ public class CursorScript : MonoBehaviour
     void Update()
     {
         mousePosition = Input.mousePosition;
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            cursor = spriteRenderer.sprite;
-        } 
-        else if (Input.GetKey(KeyCode.Space))
-        {
-            cursor = defaultSprite;
-        }
-
-        Debug.Log(camera.ScreenToWorldPoint(mousePosition));
         transform.position = camera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, initial_Z ));
     }
 
