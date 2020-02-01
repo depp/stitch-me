@@ -79,6 +79,7 @@ public class DragAnchor : MonoBehaviour
         {
             joint.frequency = physics.springFrequency;
             joint.dampingRatio = physics.springDamping;
+            joint.distance = physics.springDistance;
         }
     }
 
