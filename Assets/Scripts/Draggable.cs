@@ -26,8 +26,11 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     void UpdateDrag(PointerEventData eventData)
     {
+        RaycastResult raycast = eventData.pointerCurrentRaycast;
+        if (!raycast.isValid)
+            return;
         Vector2 currentAnchor = transform.TransformPoint(dragAnchor);
-        Vector2 targetAnchor = eventData.pointerCurrentRaycast.worldPosition;
+        Vector2 targetAnchor = raycast.worldPosition;
         Vector2 delta = targetAnchor - currentAnchor;
         transform.position += (Vector3)delta;
     }
