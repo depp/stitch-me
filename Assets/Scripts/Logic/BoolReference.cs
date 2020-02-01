@@ -4,25 +4,38 @@ using UnityEngine;
 namespace DefaultNamespace
 {
     [Serializable]
-    public class BoolReference
+    public class BoolReference : ReferenceBase
     {
         [SerializeField]
-        private BoolVariable _boolVariable;
+        private BoolVariable _variable;
 
-        public BoolVariable boolVariable
+        public BoolVariable variable
         {
-            get => _boolVariable;
-            set => _boolVariable = value;
+            get => _variable;
+            set => _variable = value;
         }
+        
+        [SerializeField]
+        private bool _constantValue;
 
+        public bool constantValue
+        {
+            get => _constantValue;
+            set => _constantValue = value;
+        }
+        
         public bool GetValue()
         {
-            return _boolVariable.GetValue();
+            if (useConstant == true) {
+                return constantValue;
+            }
+            
+            return _variable.GetValue();
         }
 
         public void SetValue(bool value)
         {
-            _boolVariable.SetValue(value);
+            _variable.SetValue(value);
         }
     }
 }

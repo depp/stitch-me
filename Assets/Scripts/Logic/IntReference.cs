@@ -4,30 +4,43 @@ using UnityEngine;
 namespace DefaultNamespace
 {
     [Serializable]
-    public class IntReference
+    public class IntReference : ReferenceBase
     {
         [SerializeField]
-        private IntVariable _intVariable;
+        private IntVariable _variable;
 
-        public IntVariable intVariable
+        public IntVariable variable
         {
-            get => _intVariable;
-            set => _intVariable = value;
+            get => _variable;
+            set => _variable = value;
+        }
+
+        [SerializeField]
+        private int _constantValue;
+
+        public int constantValue
+        {
+            get => _constantValue;
+            set => _constantValue = value;
         }
 
         public int GetValue()
         {
-            return _intVariable.GetValue();
+            if (useConstant == true) {
+                return constantValue;
+            }
+
+            return _variable.GetValue();
         }
 
         public void SetValue(int value)
         {
-            _intVariable.SetValue(value);
+            _variable.SetValue(value);
         }
 
         public void ApplyChange(int value)
         {
-            _intVariable.ApplyChange(value);
+            _variable.ApplyChange(value);
         }
     }
 }
