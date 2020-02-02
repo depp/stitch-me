@@ -3,17 +3,8 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    [RequireComponent(typeof(BoxCollider))]
     public class DetectEdges : MonoBehaviour
     {
-        private Collider2D _collider2D;
-
-        public Collider2D collider2D1
-        {
-            get => _collider2D;
-            set => _collider2D = value;
-        }
-
         [SerializeField]
         private SimpleSignal _bordersHit;
 
@@ -23,9 +14,35 @@ namespace DefaultNamespace
             set => _bordersHit = value;
         }
 
-        private void OnCollisionEnter(Collision other)
-        {
-            bordersHit.SignalChange();
-        }
+    public float Max_x;
+    public float Min_x;
+
+    public float Max_y;
+    public float Min_y;
+    private string gameObjectName;
+    void Awake()
+    {
+      gameObjectName = gameObject.name;
     }
+
+    void Update()
+    {
+      if(Input.GetMouseButton(0) == false) 
+      {
+      
+        if(transform.position.y >= Max_y ||
+          transform.position.y <= Min_y ||
+          transform.position.x >= Max_x ||
+          transform.position.x <= Min_x )
+        {
+          bordersHit.SignalChange();
+          Debug.Log("Edge Detected on " + gameObjectName);
+        }
+      }
+      // out of bounds head: x 5.50, -6.25 : y -10.40, 1.40
+
+    }
+  }
 }
+
+
