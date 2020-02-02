@@ -36,6 +36,16 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         get => _rigidbody;
         set => _rigidbody = value;
     }
+    
+    [FormerlySerializedAs("_simpleSignal")]
+    [SerializeField]
+    private SimpleSignal _dragSuccessfulCallback;
+
+    public SimpleSignal dragSuccessfulCallback
+    {
+        get => _dragSuccessfulCallback;
+        set => _dragSuccessfulCallback = value;
+    }
 
     [SerializeField]
     private UnityEvent _onEndDragSuccess;
@@ -78,15 +88,6 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         get => _yBounds;
         set => _yBounds = value;
-    }
-
-    [FormerlySerializedAs("_simpleSignal"),SerializeField]
-    private SimpleSignal _dragSuccessfulCallback;
-
-    public SimpleSignal dragSuccessfulCallback
-    {
-        get => _dragSuccessfulCallback;
-        set => _dragSuccessfulCallback = value;
     }
 
     private void Awake()
