@@ -63,7 +63,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     
-    private float _xBounds = 10;
+    private float _xBounds = 8;
 
     private float xBounds
     {
@@ -72,7 +72,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     
-    private float _yBounds = 5;
+    private float _yBounds = 4.3f;
 
     private float yBounds
     {
