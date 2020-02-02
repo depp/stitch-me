@@ -1080,7 +1080,7 @@ MonoBehaviour:
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: -4469223803301961751, guid: fffe4df2d20cd4856b04576e8249e710,
+            m_ObjectArgument: {fileID: -7236906608595808812, guid: ff1c2eb004f4241968e960188f3a20d7,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0

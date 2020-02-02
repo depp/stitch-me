@@ -2078,7 +2078,7 @@ MonoBehaviour:
           m_MethodName: SignalChange
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 25f1560644a55470abfc04817580d5db,
+            m_ObjectArgument: {fileID: 11400000, guid: f00e1ec243a8a42b58e53f9565491482,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: DefaultNamespace.ComplexPayload, Assembly-CSharp
             m_IntArgument: 0

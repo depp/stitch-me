@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4143972352
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1843,7 +1843,7 @@ GameObject:
   - component: {fileID: 1207733484}
   - component: {fileID: 1207733487}
   m_Layer: 0
-  m_Name: Animation
+  m_Name: FadeInGameTimeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
