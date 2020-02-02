@@ -272,7 +272,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2078,7 +2078,7 @@ MonoBehaviour:
           m_MethodName: SignalChange
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 6a686c5e27b4c48368ccfa13853867a8,
+            m_ObjectArgument: {fileID: 11400000, guid: 25f1560644a55470abfc04817580d5db,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: DefaultNamespace.ComplexPayload, Assembly-CSharp
             m_IntArgument: 0
