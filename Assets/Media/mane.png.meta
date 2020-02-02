@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: c7aa4260ce5a8404c8fad8ce6858a420
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -887675993473525202
+    second: mane_0
+  - first:
+      213: 3857918804368092956
+    second: mane_1
+  - first:
+      213: 2905320343440031524
+    second: mane_2
+  - first:
+      213: 6229287543396018060
+    second: mane_3
+  - first:
+      213: -376386906747486431
+    second: mane_4
+  - first:
+      213: -7588241646353927333
+    second: mane_5
+  - first:
+      213: 1786092765559854369
+    second: mane_6
+  - first:
+      213: 3732322617724208101
+    second: mane_7
+  - first:
+      213: -4268367605597859785
+    second: mane_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mane_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 529
+        width: 234
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a5e5513675ea3f0800000000000000
+      internalID: -887675993473525202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_1
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 619
+        width: 124
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fe8a266b41a8530800000000000000
+      internalID: 3857918804368092956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_2
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 378
+        width: 332
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f75759575c15820800000000000000
+      internalID: 2905320343440031524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_3
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 412
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87a2eb3400e27650800000000000000
+      internalID: 6229287543396018060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 235
+        width: 108
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f353d3a1ec6caf0800000000000000
+      internalID: -376386906747486431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 118
+        width: 342
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53bf374d6621b690800000000000000
+      internalID: -7588241646353927333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 181
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125171b38e979c810800000000000000
+      internalID: 1786092765559854369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 142
+        width: 123
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e38b9865afdbc330800000000000000
+      internalID: 3732322617724208101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mane_8
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 95
+        width: 357
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7301e890746b3c4c0800000000000000
+      internalID: -4268367605597859785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -883, y: 4}
+      - {x: -904, y: 256}
+      - {x: -681, y: 302}
+      - {x: -552, y: -41}
+    - - {x: -856, y: -448}
+      - {x: -856, y: -120}
+      - {x: -454, y: -120}
+      - {x: -454, y: -448}
+    - - {x: 495, y: -142}
+      - {x: 473, y: 149}
+      - {x: 852, y: 155}
+      - {x: 922, y: -204}
+    - - {x: 495, y: -472}
+      - {x: 500, y: -258}
+      - {x: 893, y: -260}
+      - {x: 898, y: -483}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 7279b316650794c85bf1d57a664bce10
+  - enabled: 1
+    path: Assets/Scenes/Personal/Haircut.unity
+    guid: 201c230d089d246b1842102e3740bf13
   m_configObjects: {}
