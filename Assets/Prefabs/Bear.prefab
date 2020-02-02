@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042f812accb5492d81a767279cadc498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bordersHit: {fileID: 0}
+  _bordersHit: {fileID: 11400000, guid: 161f3d1bac6454b2e85616ea20a4779a, type: 2}
   Max_x: 14.12
   Min_x: -14.12
   Max_y: 9.3
