@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37948865be48491690eaf70a54780869, type: 3}
-  m_Name: AssemblyComplete
+  m_Script: {fileID: 11500000, guid: 7b20cf5e87034bde8ff888bfc680caad, type: 3}
+  m_Name: Step 3 - Sew
   m_EditorClassIdentifier: 
   _setDefaultOnEnable: 0
   _value: 0

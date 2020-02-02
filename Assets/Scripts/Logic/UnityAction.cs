@@ -34,15 +34,26 @@ namespace DefaultNamespace
             get => _delayTime;
             set => _delayTime = value;
         }
+        
+        [SerializeField]
+        private bool _triggerOnStart = true;
+
+        public bool triggerOnStart
+        {
+            get => _triggerOnStart;
+            set => _triggerOnStart = value;
+        }
 
         private void Start()
         {
-            if (hasDelay == false) {
-                actions.Invoke();
-                
-            }
-            else {
-                StartCoroutine(CallAction());
+            if (triggerOnStart == true) {
+                if (hasDelay == false) {
+                    actions.Invoke();
+                    
+                }
+                else {
+                    StartCoroutine(CallAction());
+                }
             }
         }
 
@@ -56,7 +67,12 @@ namespace DefaultNamespace
 
         public void ExecuteActions()
         {
-            actions.Invoke();
+            if (hasDelay == false) {
+                actions.Invoke();
+            }
+            else {
+                StartCoroutine(CallAction());
+            }
         }
     }
 }

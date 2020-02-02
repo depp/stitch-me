@@ -21,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Ending.unity
     guid: 7279b316650794c85bf1d57a664bce10
   - enabled: 1
-    path: Assets/Scenes/Personal/Haircut.unity
+    path: Assets/Scenes/Haircut.unity
     guid: 201c230d089d246b1842102e3740bf13
+  - enabled: 1
+    path: Assets/Scenes/Haircut2.unity
+    guid: c81523d3e4c5545fcbcb9cdccd5a57b4
+  - enabled: 1
+    path: Assets/Scenes/GameStep1.unity
+    guid: ee7080a9ca9af44a99d6e9b771ba1404
+  - enabled: 1
+    path: Assets/Scenes/GameStep2.unity
+    guid: 2ebb45c2d8e404ac0a946956a3d14f7c
   m_configObjects: {}
