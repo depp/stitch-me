@@ -186,13 +186,25 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         
         if (collider.bounds.Intersects(target.bounds)) {
-            // var joint = target.GetComponent<SpringJoint2D>();
-            // joint.connectedBody = rigidbody;
-            transform.localPosition = originalPosition;
-            transform.eulerAngles = originalRotationn;
-            collider.enabled = false;
-            onEndDragSuccess.Invoke();
-            dragSuccessfulCallback.SignalChange();
+            SnapToPosition();
         }
+    }
+
+    private void SnapToPosition()
+    {
+        //have to zero out any forces because they may cause the bear to move after we set the position
+        ResetToOriginalPosition();
+        collider.enabled = false;
+        onEndDragSuccess.Invoke();
+        dragSuccessfulCallback.SignalChange();
+    }
+
+    public void ResetToOriginalPosition()
+    {
+        rigidbody.angularVelocity = 0;
+        rigidbody.velocity = Vector2.zero;
+
+        transform.localPosition = originalPosition;
+        transform.eulerAngles = originalRotationn;
     }
 }
