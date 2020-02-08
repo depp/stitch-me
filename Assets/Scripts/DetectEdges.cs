@@ -20,23 +20,32 @@ namespace DefaultNamespace
     public float Max_y;
     public float Min_y;
     private string gameObjectName;
+        private Rigidbody2D rigidbody;
+         
     void Awake()
     {
       gameObjectName = gameObject.name;
+      rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
       if(Input.GetMouseButton(0) == false) 
       {
       
-        if(transform.position.y >= Max_y ||
-          transform.position.y <= Min_y ||
-          transform.position.x >= Max_x ||
-          transform.position.x <= Min_x )
-        {
-          bordersHit.SignalChange();
-          Debug.Log("Edge Detected on " + gameObjectName);
+        if(transform.localPosition.y >= Max_y ||
+          transform.localPosition.y <= Min_y ||
+          transform.localPosition.x >= Max_x ||
+          transform.localPosition.x <= Min_x )
+        {   
+            bordersHit.SignalChange();
+            Debug.Log($"Edge Detected on {gameObjectName}. Resetting it to its starting position!");
+
+            rigidbody.angularVelocity = 0;
+            rigidbody.velocity = Vector2.zero;
+
+            var position = gameObject.GetComponent<Draggable>().RandomPosition;
+            transform.localPosition = position;
         }
       }
       // out of bounds head: x 5.50, -6.25 : y -10.40, 1.40

@@ -14,12 +14,21 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     [SerializeField]
     private BoxCollider2D _target;
-    
+
+
     public BoxCollider2D target
     {
         get => _target;
         set => _target = value;
     }
+
+    private Vector2 _randomPosition;
+    public Vector2 RandomPosition
+    {
+        get => _randomPosition;
+        private set => _randomPosition = value;
+    }
+
 
     private Collider2D _collider;
 
@@ -125,23 +134,23 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void SetRandomPosition()
     {
-        Vector2 newPosition = new Vector2(Random.Range(xBounds * -1f, xBounds), Random.Range(yBounds * -1f, yBounds));
-        transform.localPosition = newPosition;
+        RandomPosition = new Vector2(Random.Range(xBounds * -1f, xBounds), Random.Range(yBounds * -1f, yBounds));
+        //transform.localPosition = newPosition;
         
-        float currentXMax = newPosition.x + collider.bounds.extents.x;
-        float currentXMin = newPosition.x - collider.bounds.extents.x;
-        float currentYMax = newPosition.y + collider.bounds.extents.y;
-        float currentYMin = newPosition.y - collider.bounds.extents.y;
+        float currentXMax = RandomPosition.x + collider.bounds.extents.x;
+        float currentXMin = RandomPosition.x - collider.bounds.extents.x;
+        float currentYMax = RandomPosition.y + collider.bounds.extents.y;
+        float currentYMin = RandomPosition.y - collider.bounds.extents.y;
 
         while (currentXMax > xBounds && currentXMin < xBounds * -1f && currentYMax > yBounds && currentYMin < yBounds * -1f) {
-            newPosition = new Vector2(Random.Range(xBounds * -1f, xBounds), Random.Range(yBounds * -1f, yBounds));
-            currentXMax = newPosition.x + collider.bounds.extents.x;
-            currentXMin = newPosition.x - collider.bounds.extents.x;
-            currentYMax = newPosition.y + collider.bounds.extents.y;
-            currentYMin = newPosition.y - collider.bounds.extents.y;
+            RandomPosition = new Vector2(Random.Range(xBounds * -1f, xBounds), Random.Range(yBounds * -1f, yBounds));
+            currentXMax = RandomPosition.x + collider.bounds.extents.x;
+            currentXMin = RandomPosition.x - collider.bounds.extents.x;
+            currentYMax = RandomPosition.y + collider.bounds.extents.y;
+            currentYMin = RandomPosition.y - collider.bounds.extents.y;
         }
         
-        transform.localPosition = newPosition;
+        transform.localPosition = RandomPosition;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
