@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public PhysicsSettings physics;
+    public GameObject targetGameObject;
 
     // The drag anchor is the place on the object where the player clicked.
     Vector2 dragAnchor;
@@ -196,6 +197,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
         if (collider.bounds.Intersects(target.bounds)) {
             SnapToPosition();
+            targetGameObject.SetActive(false);
         }
     }
 
