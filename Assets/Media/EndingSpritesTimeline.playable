@@ -441,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template:
     _ease: 21
-    _initialValue: {x: 0, y: -254.07, z: 5}
+    _initialValue: {x: 0, y: -300, z: 5}
     _targetValue: {x: 0, y: 600, z: 5}
 --- !u!114 &1948954485501066065
 MonoBehaviour:
