@@ -442,7 +442,7 @@ MonoBehaviour:
   _template:
     _ease: 21
     _initialValue: {x: 0, y: -300, z: 5}
-    _targetValue: {x: 0, y: 600, z: 5}
+    _targetValue: {x: 0, y: 630, z: 5}
 --- !u!114 &1948954485501066065
 MonoBehaviour:
   m_ObjectHideFlags: 1

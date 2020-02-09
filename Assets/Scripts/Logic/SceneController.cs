@@ -42,6 +42,14 @@ namespace DefaultNamespace
             set => _targetSceneToLoad = value;
         }
 
+        private bool _fadeTransitionActive;
+
+        private bool fadeTransitionActive
+        {
+            get => _fadeTransitionActive;
+            set => _fadeTransitionActive = value;
+        }
+        
         public void TriggerLoadScene(ComplexPayload payload)
         {
             var targetScene = payload.stringPayload;
@@ -54,8 +62,11 @@ namespace DefaultNamespace
                 }));
             }
             else {
-                targetSceneToLoad = targetScene;
-                triggerFadeToBlack.SignalChange();
+                if (fadeTransitionActive == false) {
+                    fadeTransitionActive = true;
+                    targetSceneToLoad = targetScene;
+                    triggerFadeToBlack.SignalChange();
+                }
             }
         }
 
@@ -63,6 +74,7 @@ namespace DefaultNamespace
         {
             StartCoroutine(LoadScene(targetSceneToLoad, LoadSceneMode.Single, (AsyncOperation asyncOperation) =>
             {
+                fadeTransitionActive = false;
                 singleSceneLoadCompleted.SignalChange();
             }));
         }
@@ -93,5 +105,9 @@ namespace DefaultNamespace
             }
         }
         
+        public void QuitApplication()
+        {
+            Application.Quit();
+        }
     }
 }

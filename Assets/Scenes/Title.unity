@@ -244,7 +244,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -416,6 +416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067479297609291402, guid: cb2c2ebb1f09542eca871e0b615101f3,
+        type: 3}
+      propertyPath: orthographic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3067479297609291404, guid: cb2c2ebb1f09542eca871e0b615101f3,
         type: 3}
@@ -770,7 +775,7 @@ Transform:
   m_GameObject: {fileID: 761793097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 18.723167, y: -0.9696505, z: 128.7}
-  m_LocalScale: {x: 13, y: 13, z: 0.9999999}
+  m_LocalScale: {x: 13.5, y: 13.5, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 1849574068}
   m_RootOrder: 0
@@ -1091,8 +1096,8 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -3328751911059873315, guid: cf8c61591161945019a25c81cd799396, type: 2}
-    value: {fileID: 1732059388}
+  - key: {fileID: -891454701609519604, guid: cf8c61591161945019a25c81cd799396, type: 2}
+    value: {fileID: 2117616021}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1457743478
@@ -1402,7 +1407,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 2503490647789780278, guid: ff1c2eb004f4241968e960188f3a20d7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1423,8 +1428,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732059385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -55.5, z: 78.9}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 2117616021}
   m_RootOrder: 0
@@ -2083,6 +2088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117616021}
+  - component: {fileID: 2117616022}
   m_Layer: 0
   m_Name: LionHolder
   m_TagString: Untagged
@@ -2098,10 +2104,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117616020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.95, y: 0, z: 0}
+  m_LocalPosition: {x: -4.53, y: -6.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1732059387}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2117616022
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117616020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

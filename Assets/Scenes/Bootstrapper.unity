@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 636756475}
   - component: {fileID: 636756478}
   - component: {fileID: 636756474}
+  - component: {fileID: 636756479}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -293,6 +294,34 @@ MonoBehaviour:
       - m_Target: {fileID: 636756476}
         m_MethodName: TriggerUnLoadScene
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &636756479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636756473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2825a43da3041d991c14bceded3278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _simpleSignals:
+  - {fileID: 11400000, guid: 0fe150589e429444f9ec6d94df51521f, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 636756476}
+        m_MethodName: QuitApplication
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
