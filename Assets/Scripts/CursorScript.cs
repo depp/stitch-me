@@ -27,6 +27,11 @@ public class CursorScript : MonoBehaviour
     //    //camera = Camera.allCameras[0];
     //}
 
+    private void OnDisable()
+    {
+        Cursor.visible = true;
+    }
+
     void Update()
     {
         mousePosition = Input.mousePosition;

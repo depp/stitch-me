@@ -55,7 +55,7 @@ MonoBehaviour:
     _ease: 2
     _initialValue: {r: 1, g: 1, b: 1, a: 1}
     _targetValue: {r: 1, g: 1, b: 1, a: 0}
---- !u!114 &-4231946874713859462
+--- !u!114 &-2936780307218330644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94119447c77844f4adb7f20d6377db31, type: 3}
-  m_Name: Transform Position Track
+  m_Name: Transform Position Track (2)
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -77,12 +77,12 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 8.149999999999999
+    m_Start: 24.46666666666667
     m_ClipIn: 0
-    m_Asset: {fileID: 1861827606813510272}
+    m_Asset: {fileID: 1948954485501066065}
     m_Duration: 16.31666666666667
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -4231946874713859462}
+    m_ParentTrack: {fileID: -2936780307218330644}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0
@@ -420,13 +420,14 @@ MonoBehaviour:
   - {fileID: 4439545065391935914}
   - {fileID: 3553522567320645769}
   - {fileID: -1182566942142123246}
-  - {fileID: -4231946874713859462}
+  - {fileID: 3030823800824265717}
+  - {fileID: -2936780307218330644}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
   m_DurationMode: 0
   m_MarkerTrack: {fileID: -6963116893337282882}
---- !u!114 &1861827606813510272
+--- !u!114 &717548962283831455
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,12 +437,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3bd65e14c5468fa740fa56d8d30b6c, type: 3}
-  m_Name: Vector3Clip
+  m_Name: Vector3Clip(Clone)
   m_EditorClassIdentifier: 
   _template:
     _ease: 21
-    _initialValue: {x: 0, y: 3.24, z: 5}
-    _targetValue: {x: 0, y: 17.5, z: 5}
+    _initialValue: {x: 0, y: -254.07, z: 5}
+    _targetValue: {x: 0, y: 600, z: 5}
+--- !u!114 &1948954485501066065
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3bd65e14c5468fa740fa56d8d30b6c, type: 3}
+  m_Name: Vector3Clip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  _template:
+    _ease: 21
+    _initialValue: {x: 0, y: 0, z: 5}
+    _targetValue: {x: 0, y: 600, z: 5}
+--- !u!114 &3030823800824265717
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94119447c77844f4adb7f20d6377db31, type: 3}
+  m_Name: Transform Position Track (1)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 8.149999999999999
+    m_ClipIn: 0
+    m_Asset: {fileID: 717548962283831455}
+    m_Duration: 16.31666666666667
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 3030823800824265717}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Vector3Clip
+  m_Markers:
+    m_Objects: []
 --- !u!114 &3241145280635583031
 MonoBehaviour:
   m_ObjectHideFlags: 1
