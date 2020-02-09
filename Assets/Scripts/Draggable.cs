@@ -10,6 +10,8 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public PhysicsSettings physics;
     public GameObject targetGameObject;
 
+    public bool IsInPlay { get; private set; }
+
     // The drag anchor is the place on the object where the player clicked.
     Vector2 dragAnchor;
 
@@ -105,6 +107,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Collider2D collider = GetComponent<Collider2D>();
         collider.isTrigger = true;
         Rigidbody2D body = GetComponent<Rigidbody2D>();
+        //IsInPlay = true;
         if (body == null)
         {
             body = gameObject.AddComponent<Rigidbody2D>();
@@ -130,6 +133,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         originalPosition = transform.localPosition;
         originalRotationn = transform.eulerAngles;
+        IsInPlay = true;
         SetRandomPosition();
     }
 
@@ -197,6 +201,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
         if (collider.bounds.Intersects(target.bounds)) {
             SnapToPosition();
+            IsInPlay = false;
             targetGameObject.SetActive(false);
         }
     }
